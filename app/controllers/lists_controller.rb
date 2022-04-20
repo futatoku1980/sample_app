@@ -3,7 +3,16 @@ class ListsController < ApplicationController
   def new
     @list = List.new
   end
-  
+
+  def index
+    @lists = List.all
+  end
+
+  def edit
+  end
+
+  def show
+  end
 
   # 以下を追加
   def create
@@ -14,7 +23,7 @@ class ListsController < ApplicationController
     # 4. トップ画面へリダイレクト
     redirect_to '/top'
   end
-  
+
   private
   # ストロングパラメータ
   def list_params
